@@ -7,11 +7,11 @@ RUN apk add --no-cache ttf-droid ttf-droid-nonlatin fontconfig-dev freetype-dev 
     apk add msttcorefonts-installer ghostscript-fonts && \
     update-ms-fonts && \
     fc-cache -f -v && \
-    wget https://dlcdn.apache.org/pdfbox/2.0.28/pdfbox-app-2.0.28.jar && \
-    mv ./pdfbox-app-2.0.28.jar /root/pdfbox-app-2.0.28.jar
+    wget https://dlcdn.apache.org/pdfbox/3.0.2/pdfbox-app-3.0.2.jar && \
+    mv ./pdfbox-app-3.0.2.jar /root/pdfbox-app-3.0.2.jar
 
 VOLUME ["/data"]
 
 WORKDIR /data
 
-ENTRYPOINT [ "java", "-jar", "/root/pdfbox-app-2.0.28.jar"]
+ENTRYPOINT [ "java", "-jar", "/root/pdfbox-app-3.0.2.jar"]
